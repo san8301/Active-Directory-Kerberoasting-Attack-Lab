@@ -43,6 +43,9 @@ Example output:
 ServicePrincipalName                Name
 MSSQLSvc/sql.corp.local:1433        sqlsvc
 ```
+Screenshot:
+
+![SPN enumeration](screenshots/01_spn_enumeration.png) 
 
 ---
 
@@ -63,6 +66,10 @@ $krb5tgs$23$*sqlsvc$CORP.LOCAL...
 ```
 
 This hash can be cracked offline.
+
+Screenshot:
+
+![Kerberoasting Attack](screenshots/02_kerberos_hash_extraction.png) 
 
 ---
 
@@ -88,6 +95,10 @@ nxc smb 192.168.56.10 -u sqlsvc -p PASSWORD
 
 The credentials successfully authenticate to the system.
 
+Screenshot:
+
+![Hash Cracking and Credential Validation](screenshots/03_password_cracked.png) 
+
 ---
 
 ## 5. Password Reuse Discovery
@@ -105,6 +116,10 @@ Pwn3d!
 ```
 
 This confirms **administrator access to the domain controller**.
+
+Screenshot:
+
+![Password_Reuse](screenshots/04_administrator_login.png) 
 
 ---
 
@@ -162,17 +177,6 @@ This lab demonstrates how attackers can move from **low privilege domain access 
 - Password cracking
 - Credential validation
 - Post-exploitation techniques
-
----
-
-# Screenshots
-
-Include screenshots of:
-
-1. SPN enumeration
-2. Kerberos hash extraction
-3. Hashcat cracking result
-4. Successful administrator authentication
 
 ---
 
